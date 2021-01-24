@@ -85,9 +85,9 @@ const Country = ({ country }) => {
 						</div>
 
 						<div className={styles.details_panel_row}>
-							<div className={styles.details_panel_label}>Timezones</div>
+							<div className={styles.details_panel_label}>Timezone</div>
 							<div className={styles.details_panel_value}>
-								{country.timezones.map((time) => time)}
+								{country.timezones.map((time) => time).join(", ")}
 							</div>
 						</div>
 
@@ -118,7 +118,7 @@ export const getStaticPaths = async () => {
 	const paths = countries.map((country) => ({
 		params: {id: country.alpha3Code}
 	}));
-	
+
 	return {
 		paths,
 		fallback: false
