@@ -1,0 +1,19 @@
+.counts {
+  margin: 12px 0;
+  color: var(--text-selcondary);
+}
+.top_bar  {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .top_bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .counts {
+    flex: 2;
+  }
+  .input {
+    flex: 2;
+  }
+}
